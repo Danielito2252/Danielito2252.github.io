@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herberth Barrios · Ingeniería en Sistemas</title>
+<meta name="description" content="CV de Herberth Daniel Barrios Barrientos, estudiante de 10.º ciclo de Ingeniería en Sistemas en Cobán, Guatemala. Desarrollo full stack, soporte técnico, redes e infraestructura.">
+<meta name="author" content="Herberth Daniel Barrios Barrientos">
+<meta name="theme-color" content="#1E4744">
+<link rel="canonical" href="https://danielito2252.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Herberth Barrios · Ingeniería en Sistemas">
+<meta property="og:description" content="Desarrollo full stack, soporte técnico, redes e infraestructura. Cobán, Alta Verapaz, Guatemala.">
+<meta property="og:url" content="https://danielito2252.github.io/">
+<meta property="og:image" content="https://danielito2252.github.io/assets/og.jpg">
+<meta property="og:locale" content="es_GT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Montserrat";src:url("assets/fonts/montserrat-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/source-sans-3-latin-wght-normal.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+
+:root{
+  --pino:#1E4744;      /* verde pino: fondo del encabezado */
+  --selva:#2C6E67;     /* enlaces y acentos sobre claro */
+  --jade:#9DCBC3;      /* acentos sobre oscuro */
+  --cochinilla:#9E2B4E;/* el hilo rojo de la faja, solo en el tejido */
+  --papel:#F5F8F7;     /* fondo de la página */
+  --tinta:#1A2422;     /* texto */
+  --gris:#4F5E5B;      /* texto secundario */
+  --linea:#D3E2DF;     /* bordes */
+  --blanco:#FFFFFF;
+  --faja:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='24' viewBox='0 0 36 24'%3E%3Crect width='36' height='24' fill='%231E4744'/%3E%3Cpath d='M18 2 30 12 18 22 6 12Z' fill='none' stroke='%239DCBC3' stroke-width='2'/%3E%3Cpath d='M18 8 23 12 18 16 13 12Z' fill='%239E2B4E'/%3E%3Cpath d='M0 12h6M30 12h6' stroke='%239DCBC3' stroke-width='2'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Source Sans 3",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6}
+a{color:var(--selva);text-underline-offset:3px}
+a:hover{color:var(--pino)}
+:focus-visible{outline:3px solid var(--jade);outline-offset:3px;border-radius:4px}
+.saltar{position:absolute;left:-999px;top:8px;background:var(--blanco);color:var(--pino);padding:8px 14px;border-radius:6px;z-index:10}
+.saltar:focus{left:16px}
+h1,h2,h3{font-family:"Montserrat",system-ui,sans-serif;text-wrap:balance}
+ul{margin:0;padding-left:1.15rem}
+li{margin:0 0 .35rem}
+li::marker{color:var(--selva)}
+
+/* ---------- Encabezado ---------- */
+.portada{background:var(--pino);color:#E9F2F0}
+.portada__dentro{max-width:1080px;margin:0 auto;padding:72px 24px 64px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center}
+.portada h1{margin:0;font-size:clamp(2.3rem,5.6vw,4.1rem);font-weight:650;line-height:1.04;letter-spacing:-.01em;color:#F4F9F8}
+.portada__rol{margin:18px 0 0;font-family:"Montserrat",sans-serif;font-weight:550;font-size:clamp(1.02rem,1.8vw,1.2rem);color:var(--jade)}
+.portada__resumen{margin:14px 0 0;max-width:58ch;font-size:1.12rem;color:#D6E6E3}
+.portada__lugar{margin:10px 0 0;color:#B9D3CE;font-size:1rem;display:flex;align-items:center;gap:8px}
+.acciones{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.boton{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 20px;border-radius:999px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid var(--jade);color:#E9F2F0}
+.boton:hover{background:rgba(157,203,195,.14);color:#FFFFFF}
+.boton--principal{background:var(--jade);color:var(--pino)}
+.boton--principal:hover{background:#B5DAD3;color:var(--pino)}
+.boton svg{flex-shrink:0}
+.retrato{width:260px;height:260px;border-radius:50%;border:6px solid var(--jade);object-fit:cover;display:block;background:#2A5753}
+
+/* La faja: el único adorno de la página, tomado del tejido de Alta Verapaz */
+.faja{height:40px;background:
+  linear-gradient(var(--cochinilla),var(--cochinilla)) top/100% 4px no-repeat,
+  linear-gradient(var(--jade),var(--jade)) 0 8px/100% 2px no-repeat,
+  linear-gradient(var(--jade),var(--jade)) 0 30px/100% 2px no-repeat,
+  linear-gradient(var(--cochinilla),var(--cochinilla)) bottom/100% 4px no-repeat,
+  var(--faja) 0 8px/36px 24px repeat-x,
+  var(--pino);
+  animation:tejer 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes tejer{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media (prefers-reduced-motion:reduce){.faja{animation:none}}
+
+/* ---------- Contenido ---------- */
+.contenido{max-width:1080px;margin:0 auto;padding:64px 24px 40px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px}
+.bloque + .bloque{margin-top:52px}
+.bloque > h2{margin:0 0 20px;font-size:1.45rem;font-weight:650;color:var(--tinta);display:flex;align-items:center;gap:12px}
+.bloque > h2::before{content:"";width:12px;height:12px;background:var(--cochinilla);transform:rotate(45deg);flex-shrink:0}
+.perfil{margin:0;max-width:68ch}
+
+.proyecto{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:26px 26px 22px}
+.proyecto h3{margin:0;font-size:1.2rem;font-weight:650;line-height:1.3}
+.proyecto__equipo{margin:6px 0 0;color:var(--gris);font-size:.98rem}
+.proyecto__desc{margin:14px 0 14px;max-width:66ch}
+.tecnologias{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.tecnologias li{margin:0;padding:4px 12px;border-radius:999px;background:#E6F0EE;color:var(--pino);font-size:.9rem;font-weight:600}
+.proyecto__enlace{display:inline-block;margin-top:18px;font-weight:600}
+
+.puesto{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:22px 0;border-top:1px solid var(--linea)}
+.puesto:first-of-type{border-top:0;padding-top:0}
+.puesto__fecha{color:var(--gris);font-size:.95rem;padding-top:3px}
+.puesto h3{margin:0;font-size:1.08rem;font-weight:650;line-height:1.35}
+.puesto__lugar{margin:3px 0 10px;color:var(--gris);font-size:.98rem}
+
+.lateral .bloque > h2{font-size:1.2rem}
+.habilidad + .habilidad{margin-top:16px}
+.habilidad h3{margin:0 0 2px;font-size:.95rem;font-weight:650}
+.habilidad p{margin:0;color:#33413E;font-size:.98rem}
+.idioma{display:flex;justify-content:space-between;gap:12px}
+.idioma + .idioma{margin-top:8px}
+.idioma span:last-child{color:var(--gris)}
+.lista-simple{list-style:none;padding:0}
+.lista-simple li{margin:0 0 6px}
+
+/* ---------- Pie ---------- */
+.pie{background:var(--pino);color:#D6E6E3;margin-top:48px}
+.pie .faja{animation:none}
+.pie__dentro{max-width:1080px;margin:0 auto;padding:40px 24px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-end}
+.pie h2{margin:0 0 10px;font-size:1.3rem;color:#F4F9F8;font-weight:650}
+.pie a{color:#E9F2F0}
+.pie a:hover{color:var(--jade)}
+.pie__enlaces{list-style:none;padding:0;margin:0}
+.pie__enlaces li{margin:0 0 6px}
+.pie__nota{margin:0;color:#A9C8C2;font-size:.92rem}
+
+@media (max-width:860px){
+  .portada__dentro{grid-template-columns:1fr;padding:48px 20px 44px;gap:28px}
+  .retrato{width:150px;height:150px;border-width:5px;grid-row:1}
+  .contenido{grid-template-columns:1fr;padding:44px 20px 24px;gap:52px}
+  .puesto{grid-template-columns:1fr;gap:4px}
+  .proyecto{padding:20px 18px 18px}
+  .pie__dentro{padding:32px 20px 40px}
+}
+@media print{
+  .faja,.acciones,.saltar{display:none}
+  .portada,.pie{background:none;color:var(--tinta)}
+  .portada h1,.pie h2,.pie a{color:var(--tinta)}
+}
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="portada">
+  <div class="portada__dentro">
+    <div>
+      <h1>Herberth Daniel<br>Barrios Barrientos</h1>
+      <p class="portada__rol">Estudiante de Ingeniería en Sistemas, 10.º ciclo en la UMG</p>
+      <p class="portada__resumen">Desarrollo aplicaciones web de punta a punta: APIs en Node.js, interfaces en React y servidores Linux en la nube. También tengo experiencia en soporte técnico, redes y enseñanza de tecnología.</p>
+      <p class="portada__lugar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Cobán, Alta Verapaz, Guatemala
+      </p>
+      <div class="acciones">
+        <a class="boton boton--principal" href="CV_Herberth_Barrios.pdf" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Descargar CV en PDF
+        </a>
+        <a class="boton" href="https://www.linkedin.com/in/herberth-barrios-299236261/" rel="noopener">LinkedIn</a>
+        <a class="boton" href="https://github.com/Danielito2252" rel="noopener">GitHub</a>
+        <a class="boton" href="mailto:barriosherberth@gmail.com">Escribirme</a>
+      </div>
+    </div>
+    <img class="retrato" src="assets/foto.jpg" width="260" height="260" alt="Fotografía de Herberth Barrios">
+  </div>
+  <div class="faja" aria-hidden="true"></div>
+</header>
+
+<main id="contenido" class="contenido">
+  <div>
+    <section class="bloque" aria-labelledby="t-perfil">
+      <h2 id="t-perfil">Perfil</h2>
+      <p class="perfil">Estudiante de 10.º ciclo de Ingeniería en Sistemas con experiencia construyendo aplicaciones web completas, desde la API y la base de datos hasta el despliegue y la seguridad del servidor. Mi proyecto más reciente, la tienda en línea de Ajquemonel, ya está en producción y sigo trabajando en su mantenimiento y mejoras. También tengo experiencia en soporte técnico y en liderar y capacitar equipos. Busco un puesto en desarrollo o infraestructura donde aportar soluciones confiables y seguir creciendo profesionalmente.</p>
+    </section>
+
+    <section class="bloque" aria-labelledby="t-proyecto">
+      <h2 id="t-proyecto">Proyecto destacado</h2>
+      <article class="proyecto">
+        <h3>Sistema Ajquemonel: inventario y tienda en línea</h3>
+        <p class="proyecto__equipo">Proyecto en equipo de 2 desarrolladores de la UMG, Cobán. En producción.</p>
+        <p class="proyecto__desc">Plataforma para una asociación de tejedoras de Alta Verapaz que reemplaza el control en Excel: inventario en tiempo real, costeo, producción, ventas y catálogo público.</p>
+        <ul>
+          <li>API REST en Node.js y Express sobre MySQL 8, con más de 50 endpoints; panel administrativo y tienda pública en React con Vite.</li>
+          <li>Seguridad: JWT con sesiones revocables, 2FA (TOTP), roles y permisos, validación con zod, límite de peticiones y WAF (Cloudflare, ModSecurity, CrowdSec).</li>
+          <li>Despliegue en Ubuntu sobre DigitalOcean con Nginx y PM2; fotos optimizadas a WebP en DigitalOcean Spaces y respaldos diarios.</li>
+          <li>Detector de boletas de pago con OCR (Tesseract) y clasificador Naive Bayes; CI en GitHub Actions con más de 150 pruebas (Jest, Supertest, Playwright).</li>
+        </ul>
+        <ul class="tecnologias" aria-label="Tecnologías del proyecto">
+          <li>Node.js</li><li>Express</li><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>MySQL 8</li><li>Nginx</li><li>PM2</li><li>DigitalOcean</li><li>Cloudflare</li><li>GitHub Actions</li><li>Docker</li>
+        </ul>
+        <a class="proyecto__enlace" href="https://ajquemonel.gt" rel="noopener">Visitar ajquemonel.gt</a>
+      </article>
+    </section>
+
+    <section class="bloque" aria-labelledby="t-experiencia">
+      <h2 id="t-experiencia">Experiencia laboral</h2>
+
+      <div class="puesto">
+        <div class="puesto__fecha">Ene 2025 – Nov 2025</div>
+        <div>
+          <h3>Maestro de Informática y Robótica</h3>
+          <p class="puesto__lugar">Futuro Vivo, aldea Samac, Cobán</p>
+          <ul>
+            <li>Impartí computación y robótica de kínder a tercero básico, a estudiantes que en su mayoría no tenían experiencia previa con la tecnología.</li>
+            <li>Implementé las plataformas SmartC3 y JasperActive e integré recursos digitales al programa del centro.</li>
+            <li>Introduje la robótica educativa (armado, lógica y programación) con actividades adaptadas a cada grupo y avances notables en todos los grados.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="puesto">
+        <div class="puesto__fecha">Sep 2023 – Sep 2024</div>
+        <div>
+          <h3>Técnico de Soporte y Ventas</h3>
+          <p class="puesto__lugar">Suministros Tecnológicos, Cobán</p>
+          <ul>
+            <li>Dirigí y capacité a un equipo de dos técnicos en la revisión y preparación de equipos de cómputo.</li>
+            <li>Diagnostiqué, reparé y preparé equipos para la venta, asegurando su correcto funcionamiento y calidad.</li>
+            <li>Implementé protocolos de revisión y mantenimiento que agilizaron la preparación y redujeron el tiempo de espera por falta de equipos.</li>
+            <li>Asesoré a clientes en la elección de equipos según sus necesidades.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="puesto">
+        <div class="puesto__fecha">Mar 2020 – Dic 2022</div>
+        <div>
+          <h3>Auxiliar técnico en electrónica automotriz</h3>
+          <p class="puesto__lugar">Servicios Automotrices WBM, Guatemala</p>
+          <ul>
+            <li>Diagnóstico y mantenimiento de sistemas eléctricos y electrónicos de vehículos.</li>
+            <li>Instalación, revisión y sustitución de componentes eléctricos y electrónicos.</li>
+            <li>Mantenimiento preventivo y correctivo bajo supervisión del técnico responsable, siguiendo procedimientos establecidos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloque" aria-labelledby="t-formacion">
+      <h2 id="t-formacion">Formación académica</h2>
+      <div class="puesto">
+        <div class="puesto__fecha">Feb 2022 – actualidad</div>
+        <div>
+          <h3>Ingeniería en Sistemas</h3>
+          <p class="puesto__lugar">Universidad Mariano Gálvez de Guatemala, Cobán. Cursando el 10.º ciclo.</p>
+        </div>
+      </div>
+      <div class="puesto">
+        <div class="puesto__fecha">2019 – 2021</div>
+        <div>
+          <h3>Perito en Electrónica y Dispositivos Digitales</h3>
+          <p class="puesto__lugar">Colegio Tecnológico en Informática, Cobán</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <aside class="lateral">
+    <section class="bloque" aria-labelledby="t-habilidades">
+      <h2 id="t-habilidades">Habilidades técnicas</h2>
+      <div class="habilidad"><h3>Programación</h3><p>JavaScript (Node.js), Python, Java, C#, C++, SQL, HTML5 y CSS3</p></div>
+      <div class="habilidad"><h3>Desarrollo web y pruebas</h3><p>React, Vite, Express, Tailwind CSS, APIs REST; Jest, Supertest, Playwright, Cypress, Selenium</p></div>
+      <div class="habilidad"><h3>Bases de datos</h3><p>MySQL, PostgreSQL, Oracle DB</p></div>
+      <div class="habilidad"><h3>DevOps y nube</h3><p>Git y GitHub, GitHub Actions (CI/CD), Docker, Nginx, PM2, DigitalOcean, Render, Cloudflare</p></div>
+      <div class="habilidad"><h3>Infraestructura y redes</h3><p>Linux (Debian, Ubuntu, Kali), Windows Server y Active Directory, Cisco Packet Tracer, redes LAN y cableado RJ45</p></div>
+      <div class="habilidad"><h3>Seguridad y monitoreo</h3><p>WAF (Cloudflare, ModSecurity), CrowdSec, Wireshark, John the Ripper, Grafana</p></div>
+      <div class="habilidad"><h3>Soporte técnico</h3><p>Reparación y ensamblaje de equipos, soporte a usuarios, VirtualBox, VMware, Microsoft Office</p></div>
+      <div class="habilidad"><h3>IA e IoT</h3><p>TensorFlow, OpenCV, Q-Learning, OCR con Tesseract, Arduino con sensores</p></div>
+    </section>
+
+    <section class="bloque" aria-labelledby="t-blandas">
+      <h2 id="t-blandas">Habilidades blandas</h2>
+      <ul class="lista-simple">
+        <li>Liderazgo y gestión de equipos técnicos</li>
+        <li>Resolución de problemas</li>
+        <li>Comunicación efectiva</li>
+        <li>Adaptabilidad a nuevas tecnologías</li>
+        <li>Enseñanza y capacitación</li>
+      </ul>
+    </section>
+
+    <section class="bloque" aria-labelledby="t-idiomas">
+      <h2 id="t-idiomas">Idiomas</h2>
+      <div class="idioma"><span>Español</span><span>Nativo</span></div>
+      <div class="idioma"><span>Inglés</span><span>Intermedio (B1)</span></div>
+    </section>
+  </aside>
+</main>
+
+<footer class="pie">
+  <div class="faja" aria-hidden="true"></div>
+  <div class="pie__dentro">
+    <div>
+      <h2>Contacto</h2>
+      <ul class="pie__enlaces">
+        <li><a href="mailto:barriosherberth@gmail.com">barriosherberth@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/herberth-barrios-299236261/" rel="noopener">linkedin.com/in/herberth-barrios-299236261</a></li>
+        <li><a href="https://github.com/Danielito2252" rel="noopener">github.com/Danielito2252</a></li>
+      </ul>
+    </div>
+    <p class="pie__nota">Referencias disponibles a solicitud. Actualizado en octubre de 2026.</p>
+  </div>
+</footer>
+</body>
+</html>
